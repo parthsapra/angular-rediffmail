@@ -1,0 +1,144 @@
+<!-- <hello name="{{ name }}"></hello> -->
+<div class="container">
+<form> 
+	<table>
+		<tr>
+			<td colspan="4">Create a Rediffmail account</td>
+		</tr>
+		<tr>
+			<td>Full Name</td>
+			<td>:</td>
+			<td><input type="text" [(ngModel)]="user.firstName" [ngModelOptions]="{standalone: true}" ></td>
+			<td>Enter your first name & last name<br>Eg. Sameer Bhagwat</td>
+		</tr>
+		<tr>
+			<td>Choose a Rediffmail ID</td>
+			<td>:</td>
+			<td><input type="text" [(ngModel)]="user.emailId"[ngModelOptions]="{standalone: true}" ></td>
+			<td>@radifmail.com</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td><button id="btn1">Check availability</button>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td>:</td>
+			<td><input type="password" [(ngModel)]="user.password"[ngModelOptions]="{standalone: true}"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Retype Password</td>
+			<td>:</td>
+			<td><input type="password" [(ngModel)]="user.confirmPassword"[ngModelOptions]="{standalone: true}"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Alternate Email Address</td>
+			<td>:</td>
+			<td><input type="text" [(ngModel)]="user.altEmailId"[ngModelOptions]="{standalone: true}"></td>
+			<td>If you forget your password,<br>we will send it to this account.</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td colspan="2"><input type="checkbox" id="checkBox1">Click if you don't have an alternate ID</td>
+		</tr>
+		<tr>
+			<td>Mobile NO.</td>
+			<td>:</td>
+			<td>
+				<select [(ngModel)]="user.countryCode"[ngModelOptions]="{standalone: true}">
+          <option>+91</option>
+          <option>+1</option>
+          <option>+391</option>
+          <option>+44</option>
+          <option>+93</option>
+        </select>
+				<input type="text" [(ngModel)]="user.mobileNo"[ngModelOptions]="{standalone: true}">
+      </td>
+			<td>If you forget your password,<br>recover your password via text message.</td>
+		</tr>
+		<tr>
+			<td>Date of Birth</td>
+			<td>:</td>
+			<td>
+				<select [(ngModel)]="user.day"[ngModelOptions]="{standalone: true}">
+          <option value="0" disabled>Day</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+        </select>
+				<select  [(ngModel)]="user.month"[ngModelOptions]="{standalone: true}">
+          <option value="0" disabled>Month</option>
+          <option>JAN</option>
+          <option>FEB</option>
+          <option>MAR</option>
+          <option>APR</option>
+          <option>MAY</option>
+          <option>JUN</option>
+          <option>JUL</option>
+          <option>AUG</option>
+          <option>SEP</option>
+          <option>OCT</option>
+          <option>NOV</option>
+          <option>DEC</option>
+        </select>
+				<select [(ngModel)]="user.year"[ngModelOptions]="{standalone: true}">
+          <option value="0" disabled>Year</option>
+          <option>2010</option>
+          <option>2009</option>
+          <option>2007</option>
+          <option>2006</option>
+          <option>2005</option>
+          <option>2004</option>
+          <option>2003</option>
+          <option>2002</option>
+          <option>2001</option>
+          <option>2000</option>
+          <option>1999</option>
+          <option>1998</option>
+        </select>
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Gender</td>
+			<td>:</td>
+			<td><input type="radio" name="gender" value="male" [(ngModel)]="user.gender"[ngModelOptions]="{standalone: true}">Male
+				<input type="radio" name="gender" value="female" [(ngModel)]="user.gender" [ngModelOptions]="{standalone: true}">Female </td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>I live in Country</td>
+			<td>:</td>
+			<td>
+				<select [(ngModel)]="user.country"[ngModelOptions]="{standalone: true}">
+        <option>India</option>
+        <option>U.S.</option>
+        <option>Canada</option>
+        <option>Japan</option>
+        <option>Russia</option>
+      </select>
+			</td>
+      <td></td>
+		</tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td colspan="2"><button id="btn2" (click)="submit()">Create my Account>></button></td>
+    </tr>
+	</table>
+</form>
+</div>
