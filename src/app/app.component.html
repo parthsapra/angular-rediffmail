@@ -1,6 +1,6 @@
 <!-- <hello name="{{ name }}"></hello> -->
 <div  class="container">
-<form> 
+<form [formGroup]="userFormGroup"> 
 	<table>
 		<tr>
 			<td colspan="4"><label class="header"> Create a Rediffmail account</label></td>
@@ -8,13 +8,13 @@
 		<tr>
 			<td class="dLable"><label for="exampleInputEmail1 ">Full Name</label></td>
 			<td>:</td>
-			<td><input type="text"  class="form-control required" [(ngModel)]="user.firstName" [ngModelOptions]="{standalone: true}" ></td>
+			<td><input type="text"  class="form-control required" formControlName="firstName" ></td>
 			<td class="note">Enter your first name & last name<br>Eg. Sameer Bhagwat</td>
 		</tr>
 		<tr>
 			<td class="dLable"><label for="exampleInputEmail1">Choose a Rediffmail ID</label></td>
 			<td>:</td>
-			<td><input type="text" class="form-control" [(ngModel)]="user.emailId"[ngModelOptions]="{standalone: true}" ></td>
+			<td><input type="text" class="form-control" formControlName="emailId" ></td>
 			<td>@radifmail.com</td>
 		</tr>
 		<tr>
@@ -26,7 +26,7 @@
 		<tr>
 			<td class="dLable"><label for="exampleInputEmail1">Password</label></td>
 			<td>:</td>
-			<td><input type="password" class="form-control" [(ngModel)]="user.password"[ngModelOptions]="{standalone: true}"></td>
+			<td><input type="password" class="form-control" formControlName="password"></td>
 			<td class="note" rowspan="2">Password:<br>• must contain 6-12 characters<br>
             • must contain both upper and lower case characters<br>• must contain numeric characters<br>• must
             contain special characters
@@ -35,13 +35,13 @@
 		<tr>
 			<td class="dLable"><label for="exampleInputEmail1">Retype Password</label></td>
 			<td>:</td>
-			<td><input type="password" class="form-control" [(ngModel)]="user.confirmPassword"[ngModelOptions]="{standalone: true}"></td>
+			<td><input type="password" class="form-control" formControlName="confirmPassword"></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td class="dLable"><label for="exampleInputEmail1">Alternate Email Address</label></td>
 			<td>:</td>
-			<td><input type="text" class="form-control" [(ngModel)]="user.altEmailId"[ngModelOptions]="{standalone: true}"></td>
+			<td><input type="text" class="form-control" formControlName="altEmailId"></td>
 			<td class="note">If you forget your password,<br>we will send it to this account.</td>
 		</tr>
 		<tr>
@@ -53,14 +53,14 @@
 			<td class="dLable"><label for="exampleInputEmail1">Mobile NO.</label></td>
 			<td>:</td>
 			<td class="tdmob">
-				<select [(ngModel)]="user.countryCode" class="custom-select ddl1"[ngModelOptions]="{standalone: true}">
+				<select class="custom-select ddl1" formControlName="countryCode">
           <option>+91</option>
           <option>+1</option>
           <option>+391</option>
           <option>+44</option>
           <option>+93</option>
         </select>
-				<input type="text" class="form-control mob" [(ngModel)]="user.mobileNo"[ngModelOptions]="{standalone: true}">
+				<input type="text" class="form-control mob" formControlName="mobileNo">
       </td>
 			<td class="note">If you forget your password,<br>recover your password via text message.</td>
 		</tr>
@@ -68,8 +68,9 @@
 			<td class="dLable"><label for="exampleInputEmail1">Date of Birth</label></td>
 			<td>:</td>
 			<td>
-				<select class="form-control" [(ngModel)]="user.day"[ngModelOptions]="{standalone: true}">
-          <option value="0" selected disabled>Day</option>
+        <div class="row" style="margin-left:0px">
+				<select class="form-control" formControlName="day" style="width:75px">
+          <option selected disabled>Day</option>
           <option>1</option>
           <option>2</option>
           <option>3</option>
@@ -83,8 +84,8 @@
           <option>11</option>
           <option>12</option>
         </select>
-				<select  class="form-control" [(ngModel)]="user.month"[ngModelOptions]="{standalone: true}">
-          <option value="0" disabled>Month</option>
+				<select  class="form-control" formControlName="month" style="width:100px">
+          <option  disabled>Month</option>
           <option>JAN</option>
           <option>FEB</option>
           <option>MAR</option>
@@ -98,8 +99,8 @@
           <option>NOV</option>
           <option>DEC</option>
         </select>
-				<select class="form-control" [(ngModel)]="user.year"[ngModelOptions]="{standalone: true}">
-          <option value="0" disabled>Year</option>
+				<select class="form-control" formControlName="year" style="width:80px">
+          <option disabled>Year</option>
           <option>2010</option>
           <option>2009</option>
           <option>2007</option>
@@ -113,21 +114,22 @@
           <option>1999</option>
           <option>1998</option>
         </select>
+        </div>
 			</td>
 			<td></td>
 		</tr>
 		<tr>
 			<td class="dLable"><label for="exampleInputEmail1">Gender</label></td>
 			<td>:</td>
-			<td><input type="radio" name="gender" value="male" [(ngModel)]="user.gender"[ngModelOptions]="{standalone: true}">Male
-				<input type="radio" name="gender" value="female" [(ngModel)]="user.gender" [ngModelOptions]="{standalone: true}">Female </td>
+			<td><input type="radio" name="gender" value="male" formControlName="gender">Male
+				<input type="radio" name="gender" value="female" formControlName="gender">Female </td>
 			<td></td>
 		</tr>
 		<tr>
 			<td class="dLable"><label for="exampleInputEmail1">I live in Country</label></td>
 			<td>:</td>
 			<td>
-				<select class="form-control" [(ngModel)]="user.country"[ngModelOptions]="{standalone: true}">
+				<select class="form-control" formControlName="country">
         <option>India</option>
         <option>U.S.</option>
         <option>Canada</option>

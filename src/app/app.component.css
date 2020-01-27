@@ -1,4 +1,4 @@
-body{
+/* body{
     background-color: rgb(255, 255, 255);
 }
 
@@ -13,18 +13,14 @@ body{
 .dLable{
     font-family: 'Times New Roman', Times, serif;
     color: mediumblue;
-}
+} */
 .note{
     color: rosybrown;
     font-size: x-small;
 }
 
-.txt {
+/* .txt {
     border-radius: 5px;
-    /* border: 2px solid #609;
-    padding: 20px; 
-    width: 200px;
-    height: 15px;     */
 }
 
 .ddl1{
@@ -33,4 +29,4 @@ body{
 
 .tdmob{
   width: 300px;
-}
+} */
