@@ -8,7 +8,7 @@
 		<tr>
 			<td class="dLable"><label for="exampleInputEmail1 ">Full Name</label></td>
 			<td>:</td>
-			<td><input type="text"  class="form-control required" formControlName="firstName" ></td>
+			<td><input type="text"  class="form-control required" formControlName="firstName" style="width:270px"></td>
 			<td class="note">Enter your first name & last name<br>Eg. Sameer Bhagwat</td>
 		</tr>
 		<tr>
@@ -20,7 +20,7 @@
 		<tr>
 			<td></td>
 			<td></td>
-			<td><button id="btn1">Check availability</button>
+			<td><button id="btn1" class="btn btn-light">Check availability</button>
 			<td></td>
 		</tr>
 		<tr>
@@ -47,20 +47,22 @@
 		<tr>
 			<td></td>
 			<td></td>
-			<td colspan="2"><input type="checkbox"class="form-check-input" id="checkBox1">Click if you don't have an alternate ID</td>
+			<td colspan="2"><input type="checkbox" class="form-check-input" id="checkBox1">Click if you don't have an alternate ID</td>
 		</tr>
 		<tr>
 			<td class="dLable"><label for="exampleInputEmail1">Mobile NO.</label></td>
 			<td>:</td>
 			<td class="tdmob">
+        <div class="row" style="margin-left:0px">
 				<select class="custom-select ddl1" formControlName="countryCode">
           <option>+91</option>
           <option>+1</option>
           <option>+391</option>
           <option>+44</option>
           <option>+93</option>
-        </select>
+        </select>&nbsp;
 				<input type="text" class="form-control mob" formControlName="mobileNo">
+        </div>
       </td>
 			<td class="note">If you forget your password,<br>recover your password via text message.</td>
 		</tr>
@@ -83,7 +85,7 @@
           <option>10</option>
           <option>11</option>
           <option>12</option>
-        </select>
+        </select>&nbsp;
 				<select  class="form-control" formControlName="month" style="width:100px">
           <option  disabled>Month</option>
           <option>JAN</option>
@@ -98,8 +100,8 @@
           <option>OCT</option>
           <option>NOV</option>
           <option>DEC</option>
-        </select>
-				<select class="form-control" formControlName="year" style="width:80px">
+        </select>&nbsp;
+				<select class="form-control" formControlName="year" style="width:85px">
           <option disabled>Year</option>
           <option>2010</option>
           <option>2009</option>

@@ -17,13 +17,13 @@ export class AppComponent implements OnInit {
   password:['',Validators.required],
   confirmPassword:['',Validators.required],
   altEmailId:['',Validators.required],
-  countryCode:['',Validators.required],
+  countryCode:['+91',Validators.required],
   mobileNo:['',Validators.required],
   day:['Day',Validators.required],
   month:['Month',Validators.required],
   year:['Year',Validators.required],
   gender:['',Validators.required],
-  country:['',Validators.required]
+  country:['India',Validators.required]
     });
   }
 
