@@ -1,3 +1,36 @@
-p {
-  font-family: Lato;
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+.header{
+    font-weight: bold;
+    color: rgb(226, 14, 14);
+    font-size: 25px;
+    font-family: cursive;
+    display: ;
+}
+
+.dLable{
+    font-family: 'Times New Roman', Times, serif;
+    color: mediumblue;
+}
+.note{
+    color: rosybrown;
+    font-size: x-small;
+}
+
+.txt {
+    border-radius: 5px;
+    /* border: 2px solid #609;
+    padding: 20px; 
+    width: 200px;
+    height: 15px;     */
+}
+
+.ddl1{
+  width: 70px;
+}
+
+.tdmob{
+  width: 300px;
 }
